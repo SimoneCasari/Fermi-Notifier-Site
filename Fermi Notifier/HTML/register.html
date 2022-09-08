@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/hamburger.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/custom.css">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/responsive_grid.css">
+    <title>Register</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@100;400;500;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"><body>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+<title>Registration</title>
+</head>
+<header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            FERMI NOTIFIER
+        </div>
+        <a href="#" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="login.html">&gt <span>Login</a><!-- se il login è già stato effettuato, visualizzare il nome dell'utente-->
+                </li>
+                <li>
+                    <a href="../index.html">&gt <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="account.html">&gt <span>Account</span></a>
+                </li>
+                <!--    <li>
+                    <a href="#">&gt <span>Chi siamo</span></a>
+                </li>   -->
+            </ul>
+        </div>
+    </nav>
+</header>
+<body>
+    <div style="padding-top: 7%;"></div>
+<form id="registerForm" > <!-- method="" action="JS/register.js"-->
+    <h1 class="title"><span style="color: #F29C46;">></span> register</h1>
+    <div class="nomecognome inputs">
+        <div class="fname">
+            <label for="First Name">First Name</label>
+            <input type="text" placeholder="First Name" name="fname" id="fname" required class="input-box">
+        </div>
+        <div class="lname">
+            <label for="Last Name">Last Name</label>
+            <input type="text" placeholder="Last Name" name="lname" id="lname" required class="input-box">
+        </div>
+    </div>
+    <div class="email inputs">
+        <label for="Email"></label>
+        <input type="email" placeholder="Email" name="email" id="email" required class="input-box">
+    </div>
+    <div class="confirm-email inputs">
+        <label for="Confirm Email"></label>
+        <input type="text" placeholder="Confirm Email" name="confirm-email" id="confirm-email" required class="input-box">
+        <div class="question"> Please type "Yeah That's My Email" to confim email.</div>
+    </div>
+    <div class="psw inputs">
+        <label for="Password"></label>
+        <input type="password" placeholder="Password" name="psw" id="psw" required class="input-box">
+    </div>
+    <div class="confirm-psw inputs">
+        <label for="Confirm Password"></label>
+        <input type="password" placeholder="Confirm Password" name="confirm-psw" id="confirm-psw" required class="input-box">
+        <div class="question"> Please confirm password by typing a wrong one.</div>
+    </div>
+    <div class="eta inputs">
+        <label for="Age"></label>
+        <input type="number" placeholder="Insert age" name="age" id="age" required class="input-box">
+        <div class="question"> You must be older than 0 years old to register.</div>
+    </div>
+    <div class="confirm">
+        <button onclick="check()">Confirm</a>
+    </div>
+</form>
+
+
+<script>
+    $('input').on('change', function(){ // quando tag input cambia => function()
+         if($(this).val()==""){
+            $(this).removeClass('inserted');
+         }
+         if($(this).val()!=""){
+            $(this).addClass('inserted');
+         }
+    });
+</script>
+
+<script> // https://stackoverflow.com/questions/22116017/how-to-pass-a-user-entered-form-value-from-html-to-javascript
+    function check(){
+        let s = document.getElementById("confirm-email").value;
+        console.log(s);
+        if(!(s.toLowerCase() == "yeah that's my email")){
+            alert("Email not confirmed!");
+            return;
+        }
+
+
+        s = document.getElementById("confirm-psw").value;
+        let s1 = document.getElementById("psw").value;
+        console.log(s, s1);
+        if(s == s1){
+            alert("Password not confirmed!");
+            return;
+        }
+
+        s = document.getElementById("age").value;
+        console.log(typeof(s));
+        if(s < 0){
+            alert("You must be older than 0 years old to register!");
+            return;
+        }
+    }
+</script>
+</body>
+</html>

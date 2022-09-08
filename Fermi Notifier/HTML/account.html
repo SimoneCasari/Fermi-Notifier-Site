@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/hamburger.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/custom.css">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/responsive_grid.css">
+    <title>Dashboard</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@100;400;500;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"><body>
+</head>    
+<header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            FERMI NOTIFIER
+        </div>
+        <a href="#" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="login.html">&gt <span>Login</a><!-- se il login è già stato effettuato, visualizzare il nome dell'utente-->
+                </li>
+                <li>
+                    <a href="../index.html">&gt <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="account.html">&gt <span>Account</span></a>
+                </li>
+                <!--    <li>
+                    <a href="#">&gt <span>Chi siamo</span></a>
+                </li>   -->
+            </ul>
+        </div>
+    </nav>
+    <div class="dashboard">
+        <h1>Dashboard</h1>
+        <h2 style="color: #F29C46;"><span style="color: white;">Ciao</span> Utente</h2>
+        <br><a href="#">&gt <span style="color: white;">logout</span></a><br><br><br>
+        <h2>Le tue keywords</h2><br>
+        <div class="keywords" style="width: 80%;">
+            <label for="keywords"></label>
+            <input type="text" placeholder="Aggiungi/rimuovi keyword" name="keyword" id="keyword" required class="input-box">
+        </div>
+        <br>
+        <p class="sub-description">
+            Per rimuovere una parola chiave, reinserirla.
+        </p>
+        <br><br><h2>Telegram</h2><br><br>
+        <p class="description">
+            Metodo di notifica alternativo/ausiliario<br>
+            alla posta elettronica consigliato (non obbligatorio).<br><br>
+            Per essere notificato/a su telegram, scrivere: <br>
+            <br>Xvm3kkq<br><br>
+            a @ciin_gcalendar_bot<br>
+            su telegram.<br>
+        </p><br><br>
+        <h2>Notifiche</h2>
+        <br><a href="#">&gt <span style="color: white;">hai</span> 3 <span style="color: white;">notifiche</span></a>
+    </div>
+</header>
+</body>
+</html>

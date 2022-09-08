@@ -17,6 +17,7 @@ body{
     height: 100vh;
     margin: 0 auto;
     background-color: #10101E;
+    font-family: 'Montserrat', sans-serif;
 }
 header{
     display: flex;
@@ -40,28 +41,26 @@ header{
 }
 .main-subtitle1{
     color: #fff;
-    font-size: 3.5em;
     text-align: center;
     font-family: 'Source Code Pro', monospace;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 7vw;
     color: white;
     position: relative;
     padding-bottom: 1%;
 }
 .main-subtitle2{
     color: #fff;
-    font-size: 3.5em;
     text-align: center;
     font-family: 'Source Code Pro', monospace;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 7vw;
     float: left;
     color: white;
     position: relative;
@@ -69,14 +68,13 @@ header{
 }
 .main-subtitle3{
     color: #fff;
-    font-size: 3.5em;
     text-align: center;
     font-family: 'Source Code Pro', monospace;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 7vw;
     float: left;
     color: white;
     position: relative;
@@ -84,33 +82,31 @@ header{
 }
 .main-subtitle4{
     color: #fff;
-    font-size: 3.5em;
     text-align: center;
     font-family: 'Source Code Pro', monospace;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 7vw;
     float: left;
     color: #F29C46;
     position: relative;
     padding-bottom: 1%;
+
 }
 /* CONTAINERS */
 .container-title{
     margin: 0;
     padding-top: 30vh;
     height: auto;
-    flex-direction: column;
 }
 .container-subtitle{
-    margin: 0;
     float: left;
     height: 110%;
-    padding-left: 7.3%;
+    padding-left: 3.5%;
     width: auto;
-    padding-right: 30%;
+    height: auto;
     margin: 1em;
 }
 
@@ -159,7 +155,7 @@ header{
     background-color: #F29C46;
     border-radius: 10px;
 }
-@media (max-width: 400px){
+@media (max-width: 460px){
     .hamburger{
         display: flex;
     }
@@ -201,7 +197,24 @@ header{
 
 /* ---------------------- */
 
+/* MEDIA QUERY*/
 
+@media only screen and (min-width: 720px) {
+    .main-subtitle1{
+        font-size: 5vw;
+    }
+    .main-subtitle2{
+        font-size: 5vw;
+    }
+    .main-subtitle3{
+        font-size: 5vw;
+    }
+    .main-subtitle4{
+        font-size: 5vw;
+    }
+}
+
+/* ---------------------- */
 
 /* DYNAMIC TEXT*/
 p.main-subtitle1::after{
@@ -214,7 +227,7 @@ p.main-subtitle1::after{
     height: 100%;
     width: 100%;
     border-left: 2px solid white;
-    background-color:#10101E;
+    background-color: #10101E;
     animation: 
         typing 1s steps(18) forwards;
 }
@@ -228,7 +241,7 @@ p.main-subtitle2::after{
     height: 100%;
     width: 100%;
     border-left: 2px solid white;
-    background-color:#10101E;
+    background-color: #10101E;
     animation: 
         typing 1s steps(20) forwards;
     animation-delay: 1.2s;
@@ -243,7 +256,7 @@ p.main-subtitle3::after{
     height: 100%;
     width: 100%;
     border-left: 2px solid white;
-    background-color:#10101E;
+    background-color: #10101E;
     animation: 
         typing 1s steps(19) forwards;
         animation-delay: 2.4s;
@@ -258,7 +271,7 @@ p.main-subtitle4::after{
     height: 100%;
     width: 100%;
     border-left: 2px solid white;
-    background-color:#10101E;
+    background-color: #10101E;
     animation: 
         typing 1s steps(9) forwards;
         animation-delay: 3.6s;
@@ -271,6 +284,133 @@ p.main-subtitle4::after{
         left: 100%;
         margin: 0 -15px 0 0px;
         border-color: #10101E;
+        width: 0%;
     }                                                                                                                                                                          
 }
+/* ---------------------- */
+
+
+
+/* FORM */
+
+#registerForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputs{
+    width: 40%;
+    padding: 0 0 22px 0;
+}
+
+.nomecognome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fname{
+    padding-right: 20px;
+}
+
+.lname{
+    padding-left: 20px;
+}
+
+.question img{
+    height: 1em;
+    width: auto;
+    padding-right: 5px;
+}
+
+.question{
+    padding-top: 10px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.title{
+    color: white;
+}
+/* Full-width input fields */
+input{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 0 0;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #dadce0;
+    background: #fff;
+}
+
+input:focus{
+    outline-color: #1b66ca;
+    background-color: #fff;
+}
+
+#eta{
+    margin-bottom: 0;
+}
+
+  /* Set a style for the submit button - from w3schools */
+.registerbtn {
+    background-color: #1b66ca;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+  
+.registerbtn:hover {
+    opacity: 1;
+}
+
+.inserted{
+    background: white;
+}
+label{
+    color: #10101E;
+}
+.question{
+    color: white;
+}
+@media only screen and (max-width: 1024px){
+    .inputs{
+        width: 80%;
+        margin-right: 7%;
+    }
+}
+/* ---------------------- */
+
+/* DASHBOARD */
+
+.dashboard{
+    padding-top: 5%;
+    padding-left: 3%;
+    width: auto;
+    color: white;
+}
+.dashboard a{
+    text-decoration: none;
+    color: white;
+}
+.dashboard a:hover{
+    text-decoration: none;
+    color: #F29C46;
+}
+.description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.sub-description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
 /* ---------------------- */
